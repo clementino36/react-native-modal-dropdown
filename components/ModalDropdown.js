@@ -20,6 +20,7 @@ import {
   TouchableHighlight,
   Modal,
   ActivityIndicator,
+  Animated,
 } from 'react-native';
 
 import PropTypes from 'prop-types';
@@ -214,9 +215,9 @@ export default class ModalDropdown extends Component {
                                     onPress={this._onModalPress}
           >
             <View style={styles.modal}>
-              <View style={[styles.dropdown, dropdownStyle, frameStyle]}>
+              <Animated.View style={[styles.dropdown, dropdownStyle, frameStyle]}>
                 {loading ? this._renderLoading() : this._renderDropdown()}
-              </View>
+              </Animated.View>
             </View>
           </TouchableWithoutFeedback>
         </Modal>
